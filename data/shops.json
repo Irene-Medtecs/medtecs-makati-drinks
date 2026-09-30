@@ -1,0 +1,144 @@
+[
+  {
+    "id": "coco",
+    "name": "CoCo Fresh Tea & Juice",
+    "tagline": "The Undisputed Philippine Office Group-Order Champion",
+    "rating": "4.8",
+    "deliveryTime": "25-35 mins",
+    "priceRange": "₱₱ (₱100 - ₱155)",
+    "makatiLocations": [
+      "Glorietta 2 & 4, Ayala Center, Makati",
+      "Landmark Makati Food Court",
+      "Greenbelt 1 / 3, Makati",
+      "Valero St., Salcedo Village, Makati"
+    ],
+    "whyChosen": "Best overall variety, reliable high-volume group ordering on Grab/Foodpanda, caters to non-caffeine, milk tea fans, and fruity citrus lovers alike.",
+    "mustTry": [
+      {
+        "name": "3 Buddies Milk Tea",
+        "description": "Rich Taiwan milk tea loaded with silky pudding, grass jelly, and chewy pearls.",
+        "iconicReason": "CoCo's all-time #1 best-seller in Manila offices; maximum texture in one cup."
+      },
+      {
+        "name": "Panda Milk Tea",
+        "description": "Signature milk tea with a duo of black boba and translucent white agar pearls.",
+        "iconicReason": "Crisp chewiness, lighter texture than standard boba."
+      },
+      {
+        "name": "Passion Fruit Tea Burst",
+        "description": "Tangy fresh passion fruit tea loaded with pearls and nata de coco.",
+        "iconicReason": "Incredible afternoon refresher to combat tropical Manila afternoon heat."
+      },
+      {
+        "name": "Taro Milk Tea with Sago",
+        "description": "Creamy earthy taro milk infused with tiny chewy sago pearls.",
+        "iconicReason": "Comforting, creamy, and sweet."
+      }
+    ],
+    "isFeatured": true
+  },
+  {
+    "id": "tiger-sugar",
+    "name": "Tiger Sugar",
+    "tagline": "Pioneers of the Brown Sugar Milk Mousse Wave",
+    "rating": "4.7",
+    "deliveryTime": "30-40 mins",
+    "priceRange": "₱₱₱ (₱140 - ₱190)",
+    "makatiLocations": [
+      "Glorietta 1 (Ground Floor), Ayala Center, Makati"
+    ],
+    "whyChosen": "Iconic 'tiger stripe' aesthetic with warm, slow-cooked dark brown sugar pearls and rich cream mousse topping.",
+    "mustTry": [
+      {
+        "name": "Brown Sugar Boba Milk with Cream Mousse",
+        "description": "Warm caramelized boba drenched in fresh cold milk and velvety cream mousse.",
+        "iconicReason": "The global benchmark for brown sugar fresh milk drinks."
+      },
+      {
+        "name": "Roasted Boba Tea Latte",
+        "description": "Roasted oolong tea base blended with fresh milk and boba.",
+        "iconicReason": "Deals with the sweetness by offering fragrant roasted tea notes."
+      }
+    ],
+    "isFeatured": false
+  },
+  {
+    "id": "the-alley",
+    "name": "The Alley (Lujiaoxiang)",
+    "tagline": "Artisanal Handmade Deerioca Pearls & Premium Teas",
+    "rating": "4.7",
+    "deliveryTime": "30-45 mins",
+    "priceRange": "₱₱₱ (₱145 - ₱210)",
+    "makatiLocations": [
+      "Glorietta 4 (Level 2), Makati",
+      "One Bonifacio High Street (Delivers to Makati)"
+    ],
+    "whyChosen": "Handcrafted tapioca pearls kneaded and boiled for 2 hours, paired with elegant tea aromas.",
+    "mustTry": [
+      {
+        "name": "Brown Sugar Deerioca Crème Brûlée",
+        "description": "Signature Deerioca pearls layered with fresh milk and torched crème brûlée custard.",
+        "iconicReason": "Indulgent dessert in a cup, extremely rich and velvety."
+      },
+      {
+        "name": "Royal No. 9 Milk Tea",
+        "description": "Black tea infused with blueberries and sweet milk.",
+        "iconicReason": "Distinctive floral-fruity scent unique to The Alley."
+      }
+    ],
+    "isFeatured": false
+  },
+  {
+    "id": "gong-cha",
+    "name": "Gong Cha",
+    "tagline": "Royal Tea Craftsmanship & Iconic Milk Foam",
+    "rating": "4.6",
+    "deliveryTime": "25-35 mins",
+    "priceRange": "₱₱ (₱105 - ₱160)",
+    "makatiLocations": [
+      "Glorietta 4, Makati",
+      "Makati Cinema Square (Chino Roces Ave)",
+      "Greenbelt 3, Makati"
+    ],
+    "whyChosen": "Famous for their dense, savory salted cream cheese milk foam on freshly brewed single-origin teas.",
+    "mustTry": [
+      {
+        "name": "House Special Milk Wintermelon Tea",
+        "description": "Naturally sweet wintermelon tea crowned with signature savory milk froth.",
+        "iconicReason": "Classic Taiwanese favorite that requires zero added sugar."
+      },
+      {
+        "name": "Earl Grey Milk Tea with 3Js",
+        "description": "Fragrant bergamot earl grey tea with grass jelly, pudding, and pearls.",
+        "iconicReason": "High-tea sophistication combined with triple chewy toppings."
+      }
+    ],
+    "isFeatured": false
+  },
+  {
+    "id": "chicha-san-chen",
+    "name": "Chicha San Chen (吃茶三千)",
+    "tagline": "Michelin-Grade Teapresso & Fresh Taro Boba",
+    "rating": "4.9",
+    "deliveryTime": "35-45 mins",
+    "priceRange": "₱₱₱₱ (₱180 - ₱260)",
+    "makatiLocations": [
+      "Power Plant Mall, Rockwell, Makati",
+      "Greenbelt 5 (Delivery to Makati CBD)"
+    ],
+    "whyChosen": "Custom high-pressure Teapresso machines extract each cup from raw leaves on the spot. Top-tier luxury office treat.",
+    "mustTry": [
+      {
+        "name": "Fresh Taro Boba Milk Tea",
+        "description": "Real mashed Taiwanese Dajia taro paste, handmade pearls, and fresh milk.",
+        "iconicReason": "Voted by milk tea connoisseurs as the smoothest authentic taro in Manila."
+      },
+      {
+        "name": "Dong Ding Oolong Fresh Milk Tea",
+        "description": "Award-winning iTQi superior taste medal roasted oolong with slow-cooked honey boba.",
+        "iconicReason": "Unmatched roasted tea depth."
+      }
+    ],
+    "isFeatured": false
+  }
+]

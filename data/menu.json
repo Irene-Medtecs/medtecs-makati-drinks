@@ -1,0 +1,252 @@
+{
+  "shop": {
+    "name": "CoCo Fresh Tea & Juice",
+    "branch": "Makati CBD Branch (Glorietta / Landmark / Valero Delivery)",
+    "currency": "₱",
+    "deliveryNotice": "Orders will be consolidated and dispatched via GrabFood / Foodpanda to Medtecs Makati Office"
+  },
+  "customizationOptions": {
+    "sizes": [
+      { "id": "regular", "name": "Regular (500ml)", "badge": "500ml" },
+      { "id": "large", "name": "Large (700ml)", "badge": "700ml", "extraPrice": 15 }
+    ],
+    "sugarLevels": [
+      { "id": "100", "label": "100% (Regular Sweet)", "recommended": false },
+      { "id": "70", "label": "70% (Less Sugar - Balanced)", "recommended": true },
+      { "id": "50", "label": "50% (Half Sugar - Staff Pick)", "recommended": true },
+      { "id": "30", "label": "30% (Slight Sugar)", "recommended": false },
+      { "id": "0", "label": "0% (No Added Sugar)", "recommended": false }
+    ],
+    "iceLevels": [
+      { "id": "regular", "label": "Regular Ice" },
+      { "id": "less", "label": "Less Ice (Recommended)" },
+      { "id": "no-ice", "label": "No Ice" },
+      { "id": "warm", "label": "Warm / Hot (Select Teas Only)" }
+    ],
+    "toppings": [
+      { "id": "pearls", "name": "Black Tapioca Pearls", "price": 20 },
+      { "id": "pudding", "name": "Egg Pudding", "price": 25 },
+      { "id": "grass-jelly", "name": "Grass Jelly", "price": 25 },
+      { "id": "coconut-jelly", "name": "Nata de Coco / Coconut Jelly", "price": 20 },
+      { "id": "sago", "name": "Tiny Sago", "price": 20 },
+      { "id": "salty-cream", "name": "Salty Cream Cheese Cloud", "price": 35 }
+    ]
+  },
+  "categories": [
+    { "id": "must-try", "name": "⭐ Iconic Must-Tries", "icon": "star" },
+    { "id": "milk-tea", "name": "🧋 Milk Tea Series", "icon": "coffee" },
+    { "id": "fruit-tea", "name": "🍊 Fresh & Fruit Tea", "icon": "citrus" },
+    { "id": "brown-sugar", "name": "🍯 Brown Sugar Crave", "icon": "flame" },
+    { "id": "slush-specialty", "name": "🍧 Slush & Specialty", "icon": "sparkles" }
+  ],
+  "drinks": [
+    {
+      "id": "coco-3buddies",
+      "name": "CoCo 3 Buddies Milk Tea",
+      "category": "must-try",
+      "priceRegular": 120,
+      "priceLarge": 135,
+      "badge": "Office Favorite #1",
+      "description": "The ultimate comfort drink: creamy signature milk tea overflowing with silky pudding, herbal grass jelly, and chewy pearls.",
+      "image": "https://images.unsplash.com/photo-1558857563-b37cfb810903?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": true,
+      "defaultSugar": "50",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-panda",
+      "name": "Panda Milk Tea",
+      "category": "must-try",
+      "priceRegular": 110,
+      "priceLarge": 125,
+      "badge": "Signature Duo",
+      "description": "Rich Taiwanese milk tea paired with contrasting dual toppings: classic black tapioca pearls and crunchy white agar pearls.",
+      "image": "https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": true,
+      "defaultSugar": "70",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-2ladies",
+      "name": "CoCo 2 Ladies Milk Tea",
+      "category": "must-try",
+      "priceRegular": 115,
+      "priceLarge": 130,
+      "badge": "Crowd Pleaser",
+      "description": "Signature smooth milk tea paired with the classic double delight: chewy boba pearls and silky sweet egg pudding.",
+      "image": "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": true,
+      "defaultSugar": "50",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-taro-sago",
+      "name": "Taro Milk Tea with Sago",
+      "category": "must-try",
+      "priceRegular": 125,
+      "priceLarge": 140,
+      "badge": "Sweet Comfort",
+      "description": "Velvety purple taro milk paired with bouncy micro-sago pearls. Velvety, aromatic, and deeply satisfying.",
+      "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": true,
+      "defaultSugar": "50",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-passion-burst",
+      "name": "Passion Fruit Tea Burst",
+      "category": "must-try",
+      "priceRegular": 115,
+      "priceLarge": 130,
+      "badge": "Top Tropical",
+      "description": "Crisp green tea infused with real passion fruit pulp & seeds, loaded with chewy pearls and nata de coco.",
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": true,
+      "defaultSugar": "70",
+      "defaultIce": "regular"
+    },
+    {
+      "id": "coco-brown-sugar-fresh-milk",
+      "name": "Brown Sugar Boba Fresh Milk",
+      "category": "brown-sugar",
+      "priceRegular": 135,
+      "priceLarge": 150,
+      "badge": "Decadent",
+      "description": "Slow-simmered Taiwanese dark brown sugar pearls layered against cold, farm-fresh fresh milk. Non-caffeinated favorite.",
+      "image": "https://images.unsplash.com/photo-1594998893017-36147cbcae05?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": true,
+      "defaultSugar": "100",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-brown-sugar-milktea",
+      "name": "Brown Sugar Pearl Milk Tea",
+      "category": "brown-sugar",
+      "priceRegular": 125,
+      "priceLarge": 140,
+      "badge": "Caramel Rich",
+      "description": "Bold black milk tea infused with warm caramelized brown sugar and soft boba.",
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "70",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-pearl-milktea",
+      "name": "Classic Pearl Milk Tea",
+      "category": "milk-tea",
+      "priceRegular": 100,
+      "priceLarge": 115,
+      "badge": "Timeless",
+      "description": "CoCo's original recipe: bold Assam black tea, smooth creamer, and freshly cooked brown sugar pearls.",
+      "image": "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "70",
+      "defaultIce": "regular"
+    },
+    {
+      "id": "coco-jasmine-milk-tea",
+      "name": "Jasmine Green Milk Tea",
+      "category": "milk-tea",
+      "priceRegular": 100,
+      "priceLarge": 115,
+      "badge": "Floral Aroma",
+      "description": "Delicate fragrant jasmine green tea base blended with smooth milk. Light, floral, and soothing.",
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "50",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-chocolate-milktea",
+      "name": "Chocolate Milk Tea with Pearls",
+      "category": "milk-tea",
+      "priceRegular": 115,
+      "priceLarge": 130,
+      "badge": "Choco Indulgence",
+      "description": "Deep Dutch cocoa blended with rich black milk tea and chewy pearls. Perfect sweet afternoon treat.",
+      "image": "https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "50",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-salty-cream-black-tea",
+      "name": "Salty Cream Black Tea",
+      "category": "milk-tea",
+      "priceRegular": 110,
+      "priceLarge": 125,
+      "badge": "Savory Cloud",
+      "description": "Fragrant freshly brewed black tea topped with a generous layer of thick, savory Himalayan salted cream.",
+      "image": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "50",
+      "defaultIce": "less"
+    },
+    {
+      "id": "coco-lemon-wintermelon",
+      "name": "Lemon Wintermelon Dew",
+      "category": "fruit-tea",
+      "priceRegular": 105,
+      "priceLarge": 120,
+      "badge": "Caffeine-Free",
+      "description": "Sweet caramel-like wintermelon infused with zesty freshly squeezed lemon juice. Tangy, thirst-quenching classic.",
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "70",
+      "defaultIce": "regular"
+    },
+    {
+      "id": "coco-lemon-dunk",
+      "name": "Lemon Dunk Green Tea",
+      "category": "fruit-tea",
+      "priceRegular": 110,
+      "priceLarge": 125,
+      "badge": "Fresh Citrus",
+      "description": "An entire fresh lemon immersed and gently pressed into chilled fragrant jasmine green tea.",
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "70",
+      "defaultIce": "regular"
+    },
+    {
+      "id": "coco-grapefruit-yakult",
+      "name": "Grapefruit Green Tea Yakult",
+      "category": "fruit-tea",
+      "priceRegular": 125,
+      "priceLarge": 140,
+      "badge": "Digestive Zen",
+      "description": "Real ruby grapefruit pulp blended with gut-friendly Yakult and jasmine green tea.",
+      "image": "https://images.unsplash.com/photo-1556881286-fc6915169721?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "70",
+      "defaultIce": "regular"
+    },
+    {
+      "id": "coco-mango-slush",
+      "name": "Mango Slush with Pudding",
+      "category": "slush-specialty",
+      "priceRegular": 130,
+      "priceLarge": 145,
+      "badge": "Ice Blended",
+      "description": "Refreshing ice-blended Philippine sweet mangoes layered over soft, melt-in-your-mouth egg custard pudding.",
+      "image": "https://images.unsplash.com/photo-1546173159-315724a31696?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "100",
+      "defaultIce": "regular"
+    },
+    {
+      "id": "coco-taro-slush",
+      "name": "Taro Slush with Salty Cream",
+      "category": "slush-specialty",
+      "priceRegular": 135,
+      "priceLarge": 150,
+      "badge": "Creamy Freeze",
+      "description": "Blended frosty taro frappe crowned with savory cheese cloud foam.",
+      "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500&auto=format&fit=crop&q=80",
+      "isBestSeller": false,
+      "defaultSugar": "70",
+      "defaultIce": "regular"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Order ID	Timestamp	Colleague Name	Department	Contact	CoCo Drink	Size	Sweetness	Ice Level	Toppings	Special Notes	Unit Price (PHP)	Quantity	Total Price (PHP)	Status	Payment Status	Payment Method	Archived	Batch ID
+ord-1790674335720-360	2026-09-29 09:32:15	irene	legal	0922312321312312	Taro Milk Tea with Sago	Large (700ml)	70% (Less Sugar - Balanced)	Less Ice (Recommended)	+Tiny Sago (₱20)		160	1	160	pending	unpaid	GCash	No	Active
+ord-101	2026-09-29 09:30:36	Carlos M.	Finance	0917-555-0192	CoCo 3 Buddies Milk Tea	Large (700ml)	50% (Half Sugar)	Less Ice	Standard (Pearls, Pudding, Grass Jelly)	Extra straw please	135	1	135	pending	paid	GCash	No	Active
+ord-102	2026-09-29 09:30:36	Bea Tan	Marketing	0928-555-8831	Passion Fruit Tea Burst	Large (700ml)	70% (Less Sugar)	Regular Ice	+ Nata de Coco (+₱20)		150	1	150	pending	unpaid	Cash	No	Active
+ord-103	2026-09-29 09:30:36	Miguel R.	Supply Chain	0919-555-4209	CoCo 3 Buddies Milk Tea	Large (700ml)	50% (Half Sugar)	Less Ice	Standard (Pearls, Pudding, Grass Jelly)		135	1	135	pending	unpaid	GCash	No	Active
+ord-104	2026-09-29 09:30:36	Samantha Lee	Executive Office	0917-555-9102	Taro Milk Tea with Sago	Regular (500ml)	30% (Slight Sugar)	Less Ice	+ Egg Pudding (+₱25)	Not too sweet please	150	1	150	pending	paid	GCash	No	Active

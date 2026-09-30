@@ -1,0 +1,92 @@
+/* Custom styles for Medtecs Makati Boba Ordering App */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Nav Tabs */
+.nav-tab.active-tab {
+  background-color: #fff7ed;
+  color: #ea580c;
+  border: 1px solid #fed7aa;
+}
+
+.nav-tab.inactive-tab {
+  color: #64748b;
+  border: 1px solid transparent;
+}
+.nav-tab.inactive-tab:hover {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Category Filter Buttons */
+.category-btn.active {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.category-btn.inactive {
+  background-color: #ffffff;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+.category-btn.inactive:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Custom Selection Pill Cards */
+.choice-pill {
+  cursor: pointer;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  transition: all 0.15s ease-in-out;
+  user-select: none;
+}
+
+.choice-pill:hover {
+  border-color: #fdba74;
+  background-color: #fffaf5;
+}
+
+.choice-pill.selected {
+  border-color: #ea580c;
+  background-color: #fff7ed;
+  color: #9a3412;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(234, 88, 12, 0.1);
+}
+
+/* Drink card hover */
+.drink-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.drink-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* Hide scrollbar */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/organizer"
+  to = "/organizer.html"
+  status = 200

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medtecs Makati | AI Workshop Drink Break</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            coco: {
+              orange: '#f26522',
+              darkorange: '#e05310',
+              brown: '#4a2c11',
+              cream: '#fff9f0',
+              gold: '#e0a96d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-coco-orange to-amber-600 text-white text-xs sm:text-sm font-medium py-2 px-4 shadow-sm">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-extrabold bg-white text-coco-orange uppercase tracking-wider">
+          Medtecs Makati
+        </span>
+        <span>AI Workshop Drink Break</span>
+        <span class="text-white/60 hidden sm:inline">•</span>
+        <span class="text-white/90 hidden sm:inline">CoCo Fresh Tea & Juice</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="bg-black/20 px-2.5 py-0.5 rounded-full text-xs flex items-center gap-1.5">
+          <i class="fa-regular fa-clock"></i> Cut-off: <strong id="headerCutoff">2:30 PM</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-xs backdrop-blur-md bg-white/95">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-coco-orange text-white flex items-center justify-center text-2xl shadow-md shadow-orange-500/20 flex-shrink-0">
+          🧋
+        </div>
+        <div>
+          <div class="text-[11px] font-extrabold tracking-widest text-coco-orange uppercase">Medtecs Makati</div>
+          <h1 class="text-xl sm:text-2xl font-extrabold font-heading text-slate-900 tracking-tight leading-tight">
+            AI WORKSHOP DRINK BREAK
+          </h1>
+        </div>
+      </div>
+      <div class="text-right hidden sm:block">
+        <span class="text-xs text-slate-500 font-medium">Organizer: <strong id="headerOrganizer" class="text-slate-800">Irene</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Ordering Container -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6">
+
+    <!-- Closed Banner (if ordering is closed) -->
+    <div id="orderingClosedBanner" class="hidden bg-rose-50 border-2 border-rose-200 rounded-3xl p-6 sm:p-7 text-center">
+      <div class="w-12 h-12 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mx-auto mb-3">
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <h2 class="text-xl font-bold font-heading text-rose-900">Ordering is now closed</h2>
+      <p class="text-sm text-rose-700 mt-1">Drink orders for this batch have already been consolidated and placed. Please contact Irene if you need assistance!</p>
+    </div>
+
+    <!-- Active Ordering Section -->
+    <div id="orderingActiveContainer" class="space-y-6">
+      
+      <!-- Subtext / Instructions -->
+      <div class="bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-transparent border border-orange-200/80 rounded-3xl p-5 sm:p-6">
+        <h2 class="text-lg sm:text-xl font-bold font-heading text-slate-900">Choose your drink and submit your order</h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1">
+          Pick your favorite drink from the menu below, customize size, sugar, ice and toppings, then click submit. Your drink will be consolidated into the workshop order!
+        </p>
+      </div>
+
+      <!-- Step 1: Participant Information -->
+      <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-7 h-7 rounded-xl bg-coco-orange text-white flex items-center justify-center font-bold text-xs">1</div>
+          <h3 class="font-bold font-heading text-slate-900 text-base sm:text-lg">Your Information</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              Your Name <span class="text-rose-500">*</span>
+            </label>
+            <input type="text" id="participantName" placeholder="e.g. Maria Santos" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-coco-orange focus:border-transparent text-sm transition-all" required>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              Department <span class="text-rose-500">*</span>
+            </label>
+            <select id="participantDept" onchange="handleDeptChange()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-coco-orange focus:border-transparent text-sm bg-white transition-all" required>
+              <option value="">Select your department...</option>
+              <option value="Legal">Legal</option>
+              <option value="Finance">Finance</option>
+              <option value="HR">HR</option>
+              <option value="IT">IT</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Sales">Sales</option>
+              <option value="Supply Chain">Supply Chain</option>
+              <option value="Operations">Operations</option>
+              <option value="Executive Office">Executive Office</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Extra field if 'Other' is selected -->
+          <div id="otherDeptWrapper" class="hidden sm:col-span-2">
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+              Please Specify Department <span class="text-rose-500">*</span>
+            </label>
+            <input type="text" id="participantDeptOther" placeholder="Enter department name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-coco-orange focus:border-transparent text-sm transition-all">
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Drink Menu -->
+      <div class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-7 h-7 rounded-xl bg-coco-orange text-white flex items-center justify-center font-bold text-xs">2</div>
+            <div>
+              <h3 class="font-bold font-heading text-slate-900 text-base sm:text-lg">Select Drink</h3>
+              <p class="text-xs text-slate-500">Click any drink card to customize your drink</p>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input type="text" id="menuSearch" oninput="filterDrinks()" placeholder="Search drinks..." class="pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-coco-orange w-full sm:w-56 shadow-xs">
+          </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="categoryFilterContainer">
+          <button onclick="setCategoryFilter('all')" class="category-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all shadow-xs">
+            All Drinks
+          </button>
+          <button onclick="setCategoryFilter('Iconic Must-Tries')" class="category-btn inactive px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all">
+            ⭐ Must-Tries
+          </button>
+          <button onclick="setCategoryFilter('Milk Tea Series')" class="category-btn inactive px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all">
+            🧋 Milk Tea
+          </button>
+          <button onclick="setCategoryFilter('Fresh & Fruit Tea')" class="category-btn inactive px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all">
+            🍊 Fruit Tea
+          </button>
+          <button onclick="setCategoryFilter('Brown Sugar Crave')" class="category-btn inactive px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all">
+            🍯 Brown Sugar
+          </button>
+        </div>
+
+        <!-- Drinks Grid -->
+        <div id="drinksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- MODAL: DRINK CUSTOMIZATION                 -->
+  <!-- ========================================== -->
+  <div id="customModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm hidden">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 animate-scaleUp">
+      
+      <!-- Modal Header -->
+      <div class="relative p-5 sm:p-6 bg-gradient-to-b from-orange-50 to-white border-b border-slate-100">
+        <button onclick="closeCustomModal()" class="absolute right-4 top-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-sm transition-all">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="flex items-center gap-3">
+          <div class="w-16 h-16 rounded-2xl overflow-hidden bg-slate-100 flex-shrink-0 border border-orange-200 shadow-sm">
+            <img id="modalDrinkImg" src="" alt="Drink" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span id="modalDrinkCategory" class="text-[10px] font-bold uppercase tracking-wider text-coco-orange bg-orange-100 px-2 py-0.5 rounded">Category</span>
+            <h3 id="modalDrinkName" class="text-base sm:text-lg font-bold font-heading text-slate-900 mt-1">Drink Name</h3>
+            <p id="modalDrinkDesc" class="text-xs text-slate-500 line-clamp-2 mt-0.5">Description</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-5 sm:p-6 space-y-5">
+        
+        <!-- 1. Size -->
+        <div>
+          <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">1. Size</label>
+          <div class="grid grid-cols-2 gap-3" id="modalSizeGroup">
+            <div onclick="selectSize('Regular')" id="size-Regular" class="choice-pill selected flex items-center justify-between">
+              <div>
+                <div class="text-sm font-bold">Regular</div>
+                <div class="text-[11px] text-slate-500">500ml</div>
+              </div>
+              <div class="font-bold text-sm" id="sizeRegularPrice">₱120</div>
+            </div>
+            <div onclick="selectSize('Large')" id="size-Large" class="choice-pill flex items-center justify-between">
+              <div>
+                <div class="text-sm font-bold">Large</div>
+                <div class="text-[11px] text-slate-500">700ml</div>
+              </div>
+              <div class="font-bold text-sm" id="sizeLargePrice">₱135</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sugar Level -->
+        <div>
+          <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">2. Sugar</label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="modalSugarGroup">
+            <div onclick="selectSugar('100% Regular')" id="sugar-100" class="choice-pill text-xs text-center py-2">100% Regular</div>
+            <div onclick="selectSugar('70% Less Sugar')" id="sugar-70" class="choice-pill selected text-xs text-center py-2">70% Less Sugar</div>
+            <div onclick="selectSugar('50% Half Sugar')" id="sugar-50" class="choice-pill text-xs text-center py-2">50% Half Sugar</div>
+            <div onclick="selectSugar('30% Slight Sugar')" id="sugar-30" class="choice-pill text-xs text-center py-2">30% Slight Sugar</div>
+            <div onclick="selectSugar('0% No Sugar')" id="sugar-0" class="choice-pill text-xs text-center py-2">0% No Sugar</div>
+          </div>
+        </div>
+
+        <!-- 3. Ice Level -->
+        <div>
+          <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">3. Ice</label>
+          <div class="grid grid-cols-3 gap-2" id="modalIceGroup">
+            <div onclick="selectIce('Regular Ice')" id="ice-regular" class="choice-pill text-xs text-center py-2">Regular Ice</div>
+            <div onclick="selectIce('Less Ice')" id="ice-less" class="choice-pill selected text-xs text-center py-2">Less Ice</div>
+            <div onclick="selectIce('No Ice')" id="ice-none" class="choice-pill text-xs text-center py-2">No Ice</div>
+          </div>
+        </div>
+
+        <!-- 4. Toppings -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-bold text-slate-800 uppercase tracking-wider">4. Toppings <span class="text-slate-400 font-normal">(Optional)</span></label>
+            <span class="text-[11px] text-slate-400">Multiple selections allowed</span>
+          </div>
+          <div class="space-y-2" id="modalToppingsGroup">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-5 sm:p-6 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-4">
+        <div>
+          <div class="text-[11px] text-slate-500 uppercase font-medium">Total Drink Price</div>
+          <div class="text-2xl font-black font-heading text-slate-900" id="modalTotalPrice">₱120</div>
+        </div>
+        <button onclick="openReviewModal()" class="px-6 py-3 bg-coco-orange hover:bg-orange-600 text-white rounded-xl font-bold text-sm shadow-md shadow-orange-500/20 flex items-center gap-2 transition-all">
+          <span>Review Order</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: ORDER SUMMARY BEFORE SUBMISSION     -->
+  <!-- ========================================== -->
+  <div id="reviewModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm hidden">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-slate-100 animate-scaleUp">
+      <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
+        <h3 class="text-lg font-bold font-heading text-slate-900">Confirm Drink Order</h3>
+        <button onclick="closeReviewModal()" class="text-slate-400 hover:text-slate-600">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Summary Card -->
+      <div class="p-4 rounded-2xl bg-orange-50/60 border border-orange-200/80 text-left space-y-2 text-xs sm:text-sm">
+        <div class="flex justify-between border-b border-orange-200/60 pb-2">
+          <span class="text-slate-500 font-medium">Name:</span>
+          <span class="font-bold text-slate-900" id="reviewName">-</span>
+        </div>
+        <div class="flex justify-between border-b border-orange-200/60 pb-2">
+          <span class="text-slate-500 font-medium">Department:</span>
+          <span class="font-bold text-slate-900" id="reviewDept">-</span>
+        </div>
+        <div class="flex justify-between border-b border-orange-200/60 pb-2">
+          <span class="text-slate-500 font-medium">Drink:</span>
+          <span class="font-bold text-slate-900 text-right" id="reviewDrink">-</span>
+        </div>
+        <div class="flex justify-between border-b border-orange-200/60 pb-2">
+          <span class="text-slate-500 font-medium">Size:</span>
+          <span class="font-bold text-slate-800" id="reviewSize">-</span>
+        </div>
+        <div class="flex justify-between border-b border-orange-200/60 pb-2">
+          <span class="text-slate-500 font-medium">Sugar:</span>
+          <span class="font-bold text-slate-800" id="reviewSugar">-</span>
+        </div>
+        <div class="flex justify-between border-b border-orange-200/60 pb-2">
+          <span class="text-slate-500 font-medium">Ice:</span>
+          <span class="font-bold text-slate-800" id="reviewIce">-</span>
+        </div>
+        <div class="flex justify-between border-b border-orange-200/60 pb-2">
+          <span class="text-slate-500 font-medium">Toppings:</span>
+          <span class="font-bold text-slate-800" id="reviewToppings">None</span>
+        </div>
+        <div class="flex justify-between pt-1.5 text-base sm:text-lg">
+          <span class="font-black text-slate-900 font-heading">TOTAL:</span>
+          <span class="font-black text-coco-orange font-heading" id="reviewTotal">₱0</span>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div class="mt-6 flex gap-3">
+        <button onclick="closeReviewModal()" class="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-semibold text-xs sm:text-sm transition-all">
+          Back
+        </button>
+        <button id="btnSubmitOrder" onclick="executeSubmitOrder()" class="flex-1 py-3 bg-coco-orange hover:bg-orange-600 text-white rounded-xl font-bold text-xs sm:text-sm shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2 transition-all">
+          <span id="btnSubmitText">SUBMIT ORDER</span>
+          <i id="btnSubmitSpinner" class="fa-solid fa-circle-notch fa-spin hidden"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: SUCCESS SCREEN                      -->
+  <!-- ========================================== -->
+  <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm hidden">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-slate-100 text-center animate-scaleUp">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-4">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="text-2xl font-bold font-heading text-slate-900">ORDER RECEIVED 🎉</h3>
+      <p class="text-xs sm:text-sm text-slate-600 mt-1">Your drink has been added to the workshop order.</p>
+
+      <!-- Receipt Box -->
+      <div class="mt-5 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-left space-y-2 text-xs">
+        <div class="flex justify-between border-b border-slate-200 pb-1.5">
+          <span class="text-slate-500 font-medium">Name:</span>
+          <span class="font-bold text-slate-900" id="successName">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-1.5">
+          <span class="text-slate-500 font-medium">Drink:</span>
+          <span class="font-bold text-slate-900" id="successDrink">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-1.5">
+          <span class="text-slate-500 font-medium">Size:</span>
+          <span class="font-bold text-slate-800" id="successSize">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-1.5">
+          <span class="text-slate-500 font-medium">Sugar:</span>
+          <span class="font-bold text-slate-800" id="successSugar">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-1.5">
+          <span class="text-slate-500 font-medium">Ice:</span>
+          <span class="font-bold text-slate-800" id="successIce">-</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200 pb-1.5">
+          <span class="text-slate-500 font-medium">Toppings:</span>
+          <span class="font-bold text-slate-800" id="successToppings">-</span>
+        </div>
+        <div class="flex justify-between pt-1 text-sm">
+          <span class="font-bold text-slate-900">Total:</span>
+          <span class="font-extrabold text-coco-orange text-base font-heading" id="successTotal">₱0</span>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <button onclick="orderAnotherDrink()" class="w-full py-3 bg-coco-orange hover:bg-orange-600 text-white rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-orange-500/20 transition-all">
+          ORDER ANOTHER DRINK
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-xs sm:text-sm transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+    <span id="toastMsg">Action completed!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 mt-auto py-6">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <div>
+        <strong class="text-slate-700">Medtecs Makati AI Workshop</strong> • Drink Break
+      </div>
+      <div>
+        CoCo Fresh Tea & Juice Consolidation
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="ordering.js"></script>
+</body>
+</html>

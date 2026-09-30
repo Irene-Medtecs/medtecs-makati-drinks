@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/organizer", "destination": "/organizer.html" }
+  ]
+}
